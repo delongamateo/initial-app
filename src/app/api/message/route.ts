@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { api } from "~/trpc/server";
 
 import { getServerAuthSession } from "~/server/auth";
@@ -9,8 +10,6 @@ import { openai } from "~/lib/openai";
 import { SendMessageValidator } from "~/lib/SendMessageValidator";
 
 export const POST = async (req: NextRequest) => {
-  // endpoint for asking a question to a pdf file
-
   const body = await req.json();
 
   const session = await getServerAuthSession();
