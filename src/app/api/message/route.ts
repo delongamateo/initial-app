@@ -13,7 +13,7 @@ export const POST = async (req: NextRequest) => {
   const body = await req.json();
 
   const session = await getServerAuthSession();
-  if (!session?.user) return null;
+  if (!session?.user) return new Response("Unauthorized", { status: 401 });
 
   const { id: userId } = session.user;
 
