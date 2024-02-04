@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Nikol Digital App",
+  title: "Digital App",
   description: "",
 
 };
