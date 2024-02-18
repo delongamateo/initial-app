@@ -17,7 +17,7 @@ const Creators: FC<CreatorsProps> = () => {
         <h1 className="mb-3 text-5xl font-bold text-gray-900">Creators List</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {data?.map((creator, i) => <CreatorCard creator={creator} />)}
+        {data?.map((creator, i) => <CreatorCard key={i} creator={creator} />)}
       </div>
     </div>
   );
