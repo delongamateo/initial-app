@@ -31,8 +31,8 @@ const CreatorProfile: FC<CreatorProfileProps> = ({ user, creator }) => {
       </div>
       <div>
         <h2 className="text-3xl font-bold">Categories</h2>
-        {creator.categories.map((category) => (
-          <p>{category}</p>
+        {creator.categories.map((category, i) => (
+          <p key={i}>{category}</p>
         ))}
       </div>
       <CreateLink user={user} creator={creator} />
